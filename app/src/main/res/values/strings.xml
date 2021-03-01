@@ -34,4 +34,24 @@
 	<string name="exit_subtitle">You sure you want to exit SWV?</string>
 	<string name="print_complete">Printing complete</string>
 	<string name="print_failed">Printing failed</string>
+
+
+	<string name="next">LANJUT</string>
+	<string name="skip">LEWATI</string>
+	<string name="start">MULAI</string>
+
+	<string name="slide_1_title">PULSA &amp; PAKET</string>
+	<string name="slide_1_desc">Kemudahan Pembelian, Semudah Melupakan Dia Yang Selalu Ada Dimasa Lalu:)</string>
+
+	<string name="slide_2_title">PRODUK MENARIK</string>
+	<string name="slide_2_desc">Selain Menarik, Kualitas Produk Yang Lengkap Di Tambah Harga Yang Bersahabat</string>
+
+	<string name="slide_3_title">FRIENDLY</string>
+	<string name="slide_3_desc">Semua Fitur Yang Tersedia Sangat Memudahkan Untuk Bertransaksi</string>
+
+	<string name="slide_4_title">SERVER ONLINE 24 JAM</string>
+	<string name="slide_4_desc">Server Kami Online Selama 24 Jam Penuh Jarang Sekali Terjadi Gangguan Atau Server OFF</string>
+
+	<string name="slide_5_title">PELAYANAN BANTUAN</string>
+	<string name="slide_5_desc">Customer Service Kami Siap Membantu Anda Kapanpun Anda Butuhkan</string>
 </resources>
