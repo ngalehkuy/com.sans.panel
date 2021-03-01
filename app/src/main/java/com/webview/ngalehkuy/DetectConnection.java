@@ -1,4 +1,4 @@
-package mgks.os.swv;
+package com.webview.ngalehkuy;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

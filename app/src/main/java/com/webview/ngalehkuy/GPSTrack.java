@@ -1,4 +1,4 @@
-package mgks.os.swv;
+package com.webview.ngalehkuy;
 
 import android.Manifest;
 import android.annotation.SuppressLint;

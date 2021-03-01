@@ -1,4 +1,4 @@
-package mgks.os.swv;
+package com.webview.ngalehkuy;
 
 import android.app.Activity;
 import android.content.Intent;

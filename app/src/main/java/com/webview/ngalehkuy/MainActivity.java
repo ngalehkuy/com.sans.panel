@@ -1,4 +1,4 @@
-package mgks.os.swv;
+package com.webview.ngalehkuy;
 
 /*
  * Android Smart WebView is an Open Source Project available on GitHub (https://github.com/mgks/Android-SmartWebView).
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 	public static int ASWV_FCM_ID           = aswm_fcm_id();
 	public static int ASWV_LAYOUT           = SmartWebView.ASWV_LAYOUT;
-	
+
 	// user agent variables
 	static boolean POSTFIX_USER_AGENT         = SmartWebView.POSTFIX_USER_AGENT;
 	static boolean OVERRIDE_USER_AGENT        = SmartWebView.OVERRIDE_USER_AGENT;
