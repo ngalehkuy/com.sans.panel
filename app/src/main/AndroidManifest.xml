@@ -68,12 +68,16 @@
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
 				<data android:scheme="https"
-					android:host="apps.mgks.dev"
-					android:pathPrefix="/swv" />
+					android:host="ngalehkuy.com"
+					android:pathPrefix="/*" />
 				<!-- if you want only a specific directory from your website to be opened in the app through external links -->
 			</intent-filter>
 			<intent-filter android:label="OpenURI">
 				<action android:name="Open_URI" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+			<intent-filter android:label="@string/app_name">
+				<action android:name="Open_Notif" />
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 		</activity>

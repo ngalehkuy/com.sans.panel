@@ -4,17 +4,17 @@ android {
 	compileSdkVersion 30
 	buildToolsVersion '29.0.2'
 	defaultConfig {
-		applicationId 'mgks.os.swv'
+		applicationId 'co.app.nectpay'
 		minSdkVersion 21
 		targetSdkVersion 30
-		versionCode 2
-		versionName 'p_0.2'
+		versionCode 1
+		versionName '1.0'
 		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 		multiDexEnabled true
 	}
 	buildTypes {
 		release {
-			minifyEnabled false
+			minifyEnabled true
 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 		}
 	}

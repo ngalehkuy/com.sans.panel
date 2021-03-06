@@ -66,8 +66,7 @@ public class WelcomeActivity extends AppCompatActivity {
             layouts = new int[]{
                     R.layout.slide1,
                     R.layout.slide2,
-                    R.layout.slide3,
-                    R.layout.slide4};
+                    R.layout.slide3};
 
             // tombol dots (lingkaran kecil perpindahan slide)
             addBottomDots(0);

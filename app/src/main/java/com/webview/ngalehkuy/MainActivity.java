@@ -1,14 +1,5 @@
 package com.webview.ngalehkuy;
 
-/*
- * Android Smart WebView is an Open Source Project available on GitHub (https://github.com/mgks/Android-SmartWebView).
- * Initially developed by Ghazi Khan (https://github.com/mgks), under MIT Open Source License.
- * This program is free to use for private and commercial purposes.
- * Enhance Smart WebView with plugins - https://voinsource.github.io/#plugins (Google Login, Background Services, Vision API, Advance Notifications, PQL etc).
- * Please mention project source or credit developers in your Application's License(s) Wiki.
- * Giving right credit to developers encourages them to create better projects :)
- */
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -86,6 +77,7 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 //import com.google.zxing.integration.android.IntentIntegrator;
 //import com.google.zxing.integration.android.IntentResult;
 
@@ -165,7 +157,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 	private final static int loc_perm = 1;
 	private final static int file_perm = 2;
 
-	public static String asw_fcm_channel = "1";
+	public static String asw_fcm_channel = "FCM";
 	public String fcm_token;
 
 	private SecureRandom random = new SecureRandom();
@@ -277,6 +269,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 		// requesting new FCM token; updating final cookie variable
 		fcm_token();
+		FirebaseMessaging.getInstance().subscribeToTopic(SmartWebView.ASWV_FCM_CHANNEL);
 
 		// notification manager
 		NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);

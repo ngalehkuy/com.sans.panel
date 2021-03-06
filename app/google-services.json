@@ -1,34 +1,33 @@
 {
   "project_info": {
-	"project_number": "83141274643",
-	"firebase_url": "https://loeweh-32b35.firebaseio.com",
-	"project_id": "loeweh-32b35",
-	"storage_bucket": "loeweh-32b35.appspot.com"
+	"project_number": "962368599231",
+	"project_id": "nectpay-5181f",
+	"storage_bucket": "nectpay-5181f.appspot.com"
   },
   "client": [
 	{
 	  "client_info": {
-		"mobilesdk_app_id": "1:83141274643:android:d586ebadc7b56f621563e6",
+		"mobilesdk_app_id": "1:962368599231:android:a60bab26e1164cc32d420a",
 		"android_client_info": {
-		  "package_name": "mgks.os.swv"
+		  "package_name": "co.app.nectpay"
 		}
 	  },
 	  "oauth_client": [
 		{
-		  "client_id": "83141274643-avuetff82h85foqgk8424klhf5vmddtk.apps.googleusercontent.com",
+		  "client_id": "962368599231-qqitbtc2rnh9amvshenhv30pg3e0ihid.apps.googleusercontent.com",
 		  "client_type": 3
 		}
 	  ],
 	  "api_key": [
 		{
-		  "current_key": "AIzaSyA4o-qu_QFxRJeJ-LdZsYr_SiMlayGO2rI"
+		  "current_key": "AIzaSyAOMp5oa-IatmsAWISBXaaR72l64C1WsmE"
 		}
 	  ],
 	  "services": {
 		"appinvite_service": {
 		  "other_platform_oauth_client": [
 			{
-			  "client_id": "83141274643-avuetff82h85foqgk8424klhf5vmddtk.apps.googleusercontent.com",
+			  "client_id": "962368599231-qqitbtc2rnh9amvshenhv30pg3e0ihid.apps.googleusercontent.com",
 			  "client_type": 3
 			}
 		  ]

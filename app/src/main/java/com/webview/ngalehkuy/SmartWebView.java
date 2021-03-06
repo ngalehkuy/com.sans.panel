@@ -1,14 +1,5 @@
 package com.webview.ngalehkuy;
 
-/*
- * Android Smart WebView is an Open Source Project available on GitHub (https://github.com/mgks/Android-SmartWebView).
- * Initially developed by Ghazi Khan (https://github.com/mgks), under MIT Open Source License.
- * This program is free to use for private and commercial purposes.
- * Enhance Smart WebView with plugins - https://voinsource.github.io/#plugins (Google Login, Background Services, Vision API, Advance Notifications, PQL etc).
- * Please mention project source or credit developers in your Application's License(s) Wiki.
- * Giving right credit to developers encourages them to create better projects :)
- */
-
 class SmartWebView {
 
 	/* -- PERMISSION VARIABLES -- */
@@ -17,8 +8,8 @@ class SmartWebView {
 	static boolean ASWP_CAMUPLOAD     = true;         // enable upload from camera for photos
 	static boolean ASWP_ONLYCAM       = false;        // incase you want only camera files to upload
 	static boolean ASWP_MULFILE       = true;         // upload multiple files in webview
-	static boolean ASWP_LOCATION      = false;         // track GPS locations
-	static boolean ASWP_CP            = false;        // enable copy/paste within webview
+	static boolean ASWP_LOCATION      = true;         // track GPS locations
+	static boolean ASWP_CP            = true;        // enable copy/paste within webview
 
 	static boolean ASWP_RATINGS       = false;         // show ratings dialog; auto configured ; edit method get_rating() for customizations
 
@@ -40,13 +31,15 @@ class SmartWebView {
 	/* -- SECURITY VARIABLES -- */
 	static boolean ASWP_CERT_VERI     = true;         // verify whether HTTPS port needs certificate verification
 
+	/* -- FCM SETTING -- */
+	static String ASWV_FCM_CHANNEL = "NgalehKuy";
 
 	/* -- CONFIG VARIABLES -- */
 	// layout selection
 	static int ASWV_LAYOUT            = 0;            // default=0; for clear fullscreen layout, and =1 for drawer layout
 
 	// URL configs
-	static String ASWV_URL            = "https://ngalehkuy.com";  // complete URL of your website or offline webpage "file:///android_asset/offline.html";
+	static String ASWV_URL            = "https://app.nectpay.co.id/auth/login";  // complete URL of your website or offline webpage "file:///android_asset/offline.html";
 	static String ASWV_SEARCH         = "https://www.google.com/search?q=";         // search query will start by the end of the present string
 	static String ASWV_SHARE_URL      = ASWV_URL + "?share=";                       // URL where you process external content shared with the app
 
