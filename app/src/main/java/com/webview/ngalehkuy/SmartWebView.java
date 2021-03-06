@@ -14,7 +14,7 @@ class SmartWebView {
 	static boolean ASWP_RATINGS       = false;         // show ratings dialog; auto configured ; edit method get_rating() for customizations
 
 	static boolean ASWP_PULLFRESH     = true;         // pull refresh current url
-	static boolean ASWP_PBAR          = false;         // show progress bar in app
+	static boolean ASWP_PBAR          = true;         // show progress bar in app
 	static boolean ASWP_ZOOM          = false;        // zoom control for webpages view
 	static boolean ASWP_SFORM         = false;        // save form cache and auto-fill information
 	static boolean ASWP_OFFLINE       = false;        // whether the loading webpages are offline or online
@@ -24,7 +24,6 @@ class SmartWebView {
 	static boolean ASWP_ADMOB         = false;         // to load admob or not
 
 	static boolean ASWP_EXITDIAL	  = true;         // confirm to exit app on back press
-
 
 	static boolean ASWP_SLIDER      = true;
 
@@ -57,7 +56,6 @@ class SmartWebView {
 
 	// admob config
 	static String ASWV_ADMOB          = "";		// your unique publishers ID
-
 
 	/* -- RATING SYSTEM VARIABLES -- */
 	static int ASWR_DAYS      = 3;            // after how many days of usage would you like to show the dialog
