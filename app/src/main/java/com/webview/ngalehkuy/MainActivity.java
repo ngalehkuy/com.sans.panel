@@ -271,8 +271,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		// load your data from the URL in web view
 
 		// requesting new FCM token; updating final cookie variable
-		fcm_token();
 		FirebaseMessaging.getInstance().subscribeToTopic(SmartWebView.ASWV_FCM_CHANNEL);
+		fcm_token();
 
 		// notification manager
 		NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -1012,7 +1012,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 					cookieManager.setAcceptCookie(true);
 					cookieManager.setCookie(ASWV_URL, "FCM_TOKEN="+fcm_token);
 					Log.d("FCM_BAKED","YES");
-					//Log.d("COOKIES: ", cookieManager.getCookie(ASWV_URL));
+					Log.d("COOKIES: ", cookieManager.getCookie(ASWV_URL));
 				}
 			Log.d("REQ_FCM_TOKEN", fcm_token);
 		}).addOnFailureListener(e -> Log.d("REQ_FCM_TOKEN", "FAILED"));
