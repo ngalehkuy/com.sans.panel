@@ -14,7 +14,8 @@ class SmartWebView {
 	static boolean ASWP_RATINGS       = false;         // show ratings dialog; auto configured ; edit method get_rating() for customizations
 
 	static boolean ASWP_PULLFRESH     = true;         // pull refresh current url
-	static boolean ASWP_PBAR          = true;         // show progress bar in app
+	static boolean ASWP_PBAR          = false;         // show progress bar in app
+	static boolean ASWP_SLOAD          = true;         // loading in app while open page
 	static boolean ASWP_ZOOM          = false;        // zoom control for webpages view
 	static boolean ASWP_SFORM         = false;        // save form cache and auto-fill information
 	static boolean ASWP_OFFLINE       = false;        // whether the loading webpages are offline or online

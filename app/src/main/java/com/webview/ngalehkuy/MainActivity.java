@@ -86,6 +86,7 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 import java.util.regex.Matcher;
@@ -103,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 	static boolean ASWP_RATINGS             = SmartWebView.ASWP_RATINGS;
 	static boolean ASWP_PULLFRESH           = SmartWebView.ASWP_PULLFRESH;
 	static boolean ASWP_PBAR                = SmartWebView.ASWP_PBAR;
+	static boolean ASWP_SLOAD                = SmartWebView.ASWP_SLOAD;
 	static boolean ASWP_ZOOM                = SmartWebView.ASWP_ZOOM;
 	static boolean ASWP_SFORM               = SmartWebView.ASWP_SFORM;
 	static boolean ASWP_OFFLINE             = SmartWebView.ASWP_OFFLINE;
@@ -163,6 +165,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 	private SecureRandom random = new SecureRandom();
 
 	private static final String TAG = MainActivity.class.getSimpleName();
+	private ArrayList<String> loadHistoryUrls = new ArrayList<String>();
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
@@ -652,12 +655,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 	private class Callback extends WebViewClient {
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             get_location();
+			splashLoading(false);
         }
 
         public void onPageFinished(WebView view, String url) {
-            findViewById(R.id.msw_welcome).setVisibility(View.GONE);
-            findViewById(R.id.msw_view).setVisibility(View.VISIBLE);
+			splashLoading(true);
         }
+
+        public void splashLoading(Boolean is_open) {
+        	if(is_open && ASWP_SLOAD) {
+				findViewById(R.id.msw_welcome).setVisibility(View.GONE);
+				findViewById(R.id.msw_view).setVisibility(View.VISIBLE);
+			} else {
+				findViewById(R.id.msw_welcome).setVisibility(View.VISIBLE);
+				findViewById(R.id.msw_view).setVisibility(View.GONE);
+			}
+		}
         //For android below API 23
 		@Override
         public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
@@ -668,6 +681,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Overriding webview URLs
 		@Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
+			loadHistoryUrls.add(url);
         	CURR_URL = url;
 			return url_actions(view, url);
         }
@@ -676,6 +690,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		@TargetApi(Build.VERSION_CODES.N)
 		@Override
 		public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+			loadHistoryUrls.add(request.getUrl().toString());
         	CURR_URL = request.getUrl().toString();
 			return url_actions(view, request.getUrl().toString());
 		}
@@ -697,6 +712,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     //Opening URLs inside webview with request
     void aswm_view(String url, Boolean tab, int error_counter) {
+
 		if(error_counter > 2){
 			asw_error_counter = 0;
 			aswm_exit();
@@ -823,7 +839,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 	//Reloading current page
 	public void pull_fresh(){
-    	aswm_view((!CURR_URL.equals("")?CURR_URL:ASWV_URL),false, asw_error_counter);
+		if(loadHistoryUrls.size()>0) {
+			aswm_view(loadHistoryUrls.get(loadHistoryUrls.size()-1),false, asw_error_counter);
+		} else {
+			aswm_view((!CURR_URL.equals("")?CURR_URL:ASWV_URL),false, asw_error_counter);
+		}
 	}
 
 	//Getting device basic information
@@ -1137,6 +1157,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		if (event.getAction() == KeyEvent.ACTION_DOWN) {
 			if (keyCode == KeyEvent.KEYCODE_BACK) {
 				if (asw_view.canGoBack()) {
+					loadHistoryUrls.remove(loadHistoryUrls.get(loadHistoryUrls.size()-1));
 					asw_view.goBack();
 				} else {
 					if(ASWP_EXITDIAL) {
