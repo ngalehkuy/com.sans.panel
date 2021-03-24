@@ -8,7 +8,7 @@ class SmartWebView {
 	static boolean ASWP_CAMUPLOAD     = true;         // enable upload from camera for photos
 	static boolean ASWP_ONLYCAM       = false;        // incase you want only camera files to upload
 	static boolean ASWP_MULFILE       = true;         // upload multiple files in webview
-	static boolean ASWP_LOCATION      = true;         // track GPS locations
+	static boolean ASWP_LOCATION      = false;         // track GPS locations
 	static boolean ASWP_CP            = true;        // enable copy/paste within webview
 
 	static boolean ASWP_RATINGS       = false;         // show ratings dialog; auto configured ; edit method get_rating() for customizations
@@ -26,7 +26,7 @@ class SmartWebView {
 
 	static boolean ASWP_EXITDIAL	  = true;         // confirm to exit app on back press
 
-	static boolean ASWP_SLIDER      = true;
+	static boolean ASWP_SLIDER      = false;
 
 	/* -- SECURITY VARIABLES -- */
 	static boolean ASWP_CERT_VERI     = true;         // verify whether HTTPS port needs certificate verification
