@@ -16,6 +16,7 @@
         android:id="@+id/msw_welcome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+		android:background="@color/colorPrimaryDarker"
         android:visibility="visible"
         android:gravity="center_vertical|center_horizontal|center"
         android:layout_alignParentTop="true"
@@ -24,7 +25,7 @@
         tools:ignore="MissingClass,RtlHardcoded">
 
 		<pl.droidsonroids.gif.GifImageView
-			android:src="@raw/bola"
+			android:src="@raw/loader"
 			android:id="@+id/msw_logo"
 			android:layout_width="275dip"
 			android:layout_height="100dip"

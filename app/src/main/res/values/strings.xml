@@ -1,51 +1,53 @@
 <resources>
-    <string name="app_name">NectPay</string>
-	<string name="app_desc">A webview integrated w/ native features to help create most advanced hybrid applications.</string>
-    <string name="image_view">Image View</string>
-	<string name="loading">Loading</string>
-	<string name="loading2">Loading…</string>
-	<string name="mgks_promo">github.com/mgks\ninstagram.com/getmgks</string>
-    <string name="rate_dialog_title">Rate</string>
-    <string name="rate_dialog_message">If you like our app, would you mind taking a moment to rate it? It won\'t take more than a minute. Thanks!</string>
-    <string name="rate_dialog_ok">RATE</string>
-    <string name="rate_dialog_cancel">LATER</string>
-    <string name="rate_dialog_no">DON\'T ASK AGAIN</string>
-	<string name="loc_fail">Failed to Find Location</string>
-    <string name="loc_fail_text">Please Check Your GPS Location.</string>
-    <string name="loc_fail_more">Please check if your GPS is enabled, if not, please set it on high accuracy from location settings.</string>
-    <string name="loc_perm">Allow Permission for Location</string>
-    <string name="loc_perm_text">Give this app permission to check your location.</string>
-    <string name="loc_perm_more">Please allow this app to know your location for better overall experience.</string>
-	<string name="dl_downloading">Downloading file…</string>
-	<string name="dl_downloading2">Downloading File</string>
-	<string name="fl_chooser">File Chooser</string>
-	<string name="went_wrong">Something Went Wrong!</string>
-	<string name="check_connection">Please check your Network Connection!</string>
-	<string name="share_w_friends">Share with your Friends</string>
-	<string name="notification_channel_name">Important Alerts</string>
-	<string name="notification_channel_desc">Get latest and important alerts.</string>
-	<string name="search">Search</string>
-	<string name="exit">Exit</string>
-	<string name="open">Open</string>
-	<string name="close">Close</string>
-	<string name="search_hint">Enter your query here</string>
-	<string name="connecting">Connecting…</string>
-	<string name="exit_title">Exit confirmation</string>
-	<string name="exit_subtitle">You sure you want to exit?</string>
-	<string name="print_complete">Printing complete</string>
-	<string name="print_failed">Printing failed</string>
-
+    <string name="app_name">Spetr-media</string>
+	<string name = "app_desc"> Tampilan web terintegrasi dengan fitur asli untuk membantu membuat aplikasi hybrid paling canggih. </string>
+	<string name = "image_view"> Tampilan Gambar </string>
+	<string name = "loading"> Memuat </string>
+	<string name = "loading2"> Memuat… </string>
+	<string name = "mgks_promo"> github.com/mgks\ninstagram.com/getmgks </string>
+	<string name = "rate_dialog_title"> Beri Nilai </string>
+	<string name = "rate_dialog_message"> Jika Anda menyukai aplikasi kami, maukah Anda meluangkan waktu untuk menilai? Ini tidak akan memakan waktu lebih dari satu menit. Terima kasih! </string>
+	<string name = "rate_dialog_ok"> RATE </string>
+	<string name = "rate_dialog_cancel"> LATER </string>
+	<string name = "rate_dialog_no"> JANGAN TANYA LAGI </string>
+	<string name = "loc_fail"> Gagal Menemukan Lokasi </string>
+	<string name = "loc_fail_text"> Harap Periksa Lokasi GPS Anda. </string>
+	<string name = "loc_fail_more"> Periksa apakah GPS Anda diaktifkan, jika tidak, harap setel ke akurasi tinggi dari pengaturan lokasi. </string>
+	<string name = "loc_perm"> Izinkan Izin untuk Lokasi </string>
+	<string name = "loc_perm_text"> Berikan izin aplikasi ini untuk memeriksa lokasi Anda. </string>
+	<string name = "loc_perm_more"> Izinkan aplikasi ini mengetahui lokasi Anda untuk pengalaman keseluruhan yang lebih baik. </string>
+	<string name = "dl_downloading"> Mengunduh file… </string>
+	<string name = "dl_downloading2"> Mengunduh File </string>
+	<string name = "fl_chooser"> Pemilih File </string>
+	<string name = "went_wrong"> Ada Yang Salah! </string>
+	<string name = "check_connection"> Periksa Koneksi Jaringan Anda! </string>
+	<string name = "share_w_friends"> Bagikan dengan Teman Anda </string>
+	<string name = "notification_channel_name"> Peringatan Penting </string>
+	<string name = "notification_channel_desc"> Dapatkan lansiran terbaru dan penting. </string>
+	<string name = "search"> Telusuri </string>
+	<string name = "exit"> Keluar </string>
+	<string name = "open"> Buka </string>
+	<string name = "close"> Tutup </string>
+	<string name = "search_hint"> Masukkan kueri Anda di sini </string>
+	<string name = "connecting"> Menghubungkan… </string>
+	<string name = "exit_title"> Keluar dari konfirmasi </string>
+	<string name = "exit_subtitle"> Anda yakin ingin keluar? </string>
+	<string name = "print_complete"> Pencetakan selesai </string>
+	<string name = "print_failed"> Pencetakan gagal </string>
 
 	<string name="next">LANJUT</string>
 	<string name="skip">LEWATI</string>
 	<string name="start">MULAI</string>
 
-	<string name="slide_1_title">MUDAH DIGUNAKAN </string>
-	<string name="slide_1_desc">Cocok bagi pengguna smartphone pintar, Dengan design yang modern, membuat transaksi lebih mudah dan nyaman.</string>
+	<string name="slide_1_title">PRODUK LENGKAP</string>
+	<string name="slide_1_desc">Layanan yang kami sediakan sangat lengkap dalam satu dashboard. Anda bisa menambahkan Followers, Like, Views, Dll pada aplikasi kami.</string>
 
-	<string name="slide_2_title">COCOK BAGI RESELLER </string>
-	<string name="slide_2_desc">Jika kamu Reseller, maka disini adalah solusi terbaik untuk mendapatkan untung yang melimpah.</string>
+	<string name="slide_2_title">MUDAH DAN PRAKTIS</string>
+	<string name="slide_2_desc">Aplikasi kami sangat mudah dan praktis digunakan.</string>
 
-	<string name="slide_3_title">LAYANAN &amp; PROMO MENARIK</string>
-	<string name="slide_3_desc">Terdapat banyak layanan dan promo yang menarik, dan layanan tidak menguras dompet dan beda dari yang lain.</string>
+	<string name="slide_3_title"> CEPAT DAN BERKUALITAS</string>
+	<string name="slide_3_desc">Pesanan anda diproses dengan cepat oleh system robot kami yang berjalan 24 jam nonstop. Kami memastikan layanan yang disediakan memiliki kualitas terbaik.</string>
+
+	<string name="slide_4_title">HARGA TERJANGKAU</string>
+	<string name="slide_4_desc">Layanan yang kami sediakan memiliki harga sangat terjangkau mulai dari Rp 0 per 1.000,-</string>
 </resources>

@@ -44,13 +44,16 @@ public class Firebase extends FirebaseMessagingService {
 
 		Uri soundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 		NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, SmartWebView.ASWV_FCM_CHANNEL)
-				.setSmallIcon(R.mipmap.ic_launcher)
+				.setSmallIcon(R.raw.icon_notif)
+				.setColor(getResources().getColor(R.color.colorPrimaryDark))
 				.setContentTitle(title)
 				.setContentText(message)
 				.setAutoCancel(true)
 				.setSound(soundUri)
 				.setContentIntent(pendingIntent);
 		Notification noti = notificationBuilder.build();
+
+
 		noti.flags = Notification.DEFAULT_LIGHTS | Notification.FLAG_AUTO_CANCEL;
 
 		if (img != null) {

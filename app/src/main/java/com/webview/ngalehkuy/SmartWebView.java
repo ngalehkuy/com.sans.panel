@@ -5,9 +5,9 @@ class SmartWebView {
 	/* -- PERMISSION VARIABLES -- */
 	static boolean ASWP_JSCRIPT       = true;         // enable JavaScript for webview
 	static boolean ASWP_FUPLOAD       = true;         // upload file from webview
-	static boolean ASWP_CAMUPLOAD     = true;         // enable upload from camera for photos
+	static boolean ASWP_CAMUPLOAD     = false;         // enable upload from camera for photos
 	static boolean ASWP_ONLYCAM       = false;        // incase you want only camera files to upload
-	static boolean ASWP_MULFILE       = true;         // upload multiple files in webview
+	static boolean ASWP_MULFILE       = false;         // upload multiple files in webview
 	static boolean ASWP_LOCATION      = false;         // track GPS locations
 	static boolean ASWP_CP            = true;        // enable copy/paste within webview
 
@@ -26,7 +26,7 @@ class SmartWebView {
 
 	static boolean ASWP_EXITDIAL	  = true;         // confirm to exit app on back press
 
-	static boolean ASWP_SLIDER      = false;
+	static boolean ASWP_SLIDER      = true;
 
 	/* -- SECURITY VARIABLES -- */
 	static boolean ASWP_CERT_VERI     = true;         // verify whether HTTPS port needs certificate verification
@@ -39,7 +39,7 @@ class SmartWebView {
 	static int ASWV_LAYOUT            = 0;            // default=0; for clear fullscreen layout, and =1 for drawer layout
 
 	// URL configs
-	static String ASWV_URL            = "https://app.nectpay.co.id/auth/login";  // complete URL of your website or offline webpage "file:///android_asset/offline.html";
+	static String ASWV_URL            = "https://spetr-media.com/auth/signin";  // https://spetr-media.com/auth/signin complete URL of your website or offline webpage "file:///android_asset/offline.html";
 	static String ASWV_SEARCH         = "https://www.google.com/search?q=";         // search query will start by the end of the present string
 	static String ASWV_SHARE_URL      = ASWV_URL + "?share=";                       // URL where you process external content shared with the app
 

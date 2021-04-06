@@ -70,6 +70,9 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.downloader.Error;
+import com.downloader.OnDownloadListener;
+import com.downloader.PRDownloader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -169,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-			super.onActivityResult(requestCode, resultCode, intent);
+    	super.onActivityResult(requestCode, resultCode, intent);
 
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -273,6 +276,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		// requesting new FCM token; updating final cookie variable
 		FirebaseMessaging.getInstance().subscribeToTopic(SmartWebView.ASWV_FCM_CHANNEL);
 		fcm_token();
+
 
 		// notification manager
 		NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -605,6 +609,55 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             aswm_view(path, false, asw_error_counter);
         }
     }
+	public void downloadPdfFromInternet(String url, String dirPath, String fileName, File downloadedFile) {
+		//
+		PRDownloader.initialize(getApplicationContext());
+		PRDownloader.download(
+				url,
+				dirPath,
+				fileName
+		).build()
+				.start(new OnDownloadListener() {
+					@Override
+				public void onDownloadComplete() {
+					Toast.makeText(MainActivity.this, "downloadComplete", Toast.LENGTH_LONG)
+						.show();
+					File downloadedFile = null;
+
+					File sd_directory   = getExternalFilesDir(dirPath);
+						try {
+							downloadedFile =  File.createTempFile(fileName, ".pdf", sd_directory);
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+						showPdfFromFile(downloadedFile);
+				}
+
+					@Override
+					public void onError(Error error) {
+						Toast.makeText(
+								MainActivity.this,
+								"Error in downloading file : $error",
+								Toast.LENGTH_LONG
+						)
+								.show();
+					}
+
+		});
+	}
+
+	public void showPdfFromFile(File file) {
+		Intent target = new Intent(Intent.ACTION_VIEW);
+		target.setDataAndType(Uri.fromFile(file),"application/pdf");
+		target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+
+		Intent intent = Intent.createChooser(target, "Open File");
+		try {
+			startActivity(intent);
+		} catch (ActivityNotFoundException e) {
+			// Instruct the user to install a PDF reader here, or something
+		}
+	}
 
 	public class WebViewJavaScriptInterface {
 		WebViewJavaScriptInterface(Context context) {
@@ -760,7 +813,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		// use this in a hyperlink to redirect back to default URL :: href="refresh:android"
 		} else if (url.startsWith("refresh:")) {
 			String ref_sch = (Uri.parse(url).toString()).replace("refresh:","");
+
+			Log.d("Refresh : ", url);
 			if(ref_sch.matches("URL")){
+				Log.d("Refresh CURR_URL : ", ASWV_URL);
 				CURR_URL = ASWV_URL;
 			}
 			pull_fresh();
@@ -772,6 +828,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 		} else if(url.startsWith("print:")) {
 			print_page(view,view.getTitle(),true);
+
+		} else if(url.startsWith("my.bluetoothprint.scheme:")) {
+			final String app_package = "mate.bluetoothprint";
+			PackageManager pm = getPackageManager();
+			boolean isInstalled = isPackageInstalled(app_package, pm);
+			if(!isInstalled) {
+				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + app_package)));
+			} else {
+				Log.d("url_actions: ", "ada??");
+				aswm_view(url,true, asw_error_counter);
+			}
 
 		// use this to open your apps page on google play store app :: href="rate:android"
 		} else if (url.startsWith("rate:")) {
@@ -818,6 +885,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		return a;
 	}
 
+	// Check App has istall?
+	private boolean isPackageInstalled(String packageName, PackageManager packageManager) {
+		try {
+			packageManager.getPackageInfo(packageName, 0);
+			return true;
+		} catch (PackageManager.NameNotFoundException e) {
+			return false;
+		}
+	}
+
 	//Getting host name
 	public static String aswm_host(String url){
 		if (url == null || url.length() == 0) {
@@ -839,8 +916,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 	//Reloading current page
 	public void pull_fresh(){
+		Log.d("pull_fresh: ", String.valueOf(loadHistoryUrls.size()));
 		if(loadHistoryUrls.size()>0) {
-			aswm_view(loadHistoryUrls.get(loadHistoryUrls.size()-1),false, asw_error_counter);
+			Log.d("pull_fresh: ", loadHistoryUrls.get(loadHistoryUrls.size()-1));
+			if(loadHistoryUrls.get(loadHistoryUrls.size()-1).startsWith("refresh:")) {
+				aswm_view(ASWV_URL,false, asw_error_counter);
+			} else {
+				aswm_view(loadHistoryUrls.get(loadHistoryUrls.size()-1),false, asw_error_counter);
+			}
 		} else {
 			aswm_view((!CURR_URL.equals("")?CURR_URL:ASWV_URL),false, asw_error_counter);
 		}

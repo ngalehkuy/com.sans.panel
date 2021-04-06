@@ -1,13 +1,16 @@
 body,
 input#inputFile {
-  background-color: #119CF1;
+  background-color: #0BAEC0;
 }
+
 ::selection {
   background-color: transparent;
 }
+
 ::-moz-selection {
   background-color: transparent;
 }
+
 * {
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
@@ -15,6 +18,7 @@ input#inputFile {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+
 [contenteditable],
 input[type="text"],
 textarea {
@@ -23,16 +27,19 @@ textarea {
   -ms-user-select: text;
   user-select: text;
 }
+
 body {
   margin: 2.5em 0 0;
   font-family: segoe ui, sans-serif;
 }
+
 .head-logo {
   max-width: 15em;
   width: 90%;
   display: block;
   margin: 1em auto;
 }
+
 a,
 a:active,
 a:visited {
@@ -40,52 +47,62 @@ a:visited {
   font-family: segoe ui;
   color: #fff;
 }
+
 h3 {
   color: #fff;
   font-size: 1em;
   font-weight: 500;
 }
+
 .cont,
 .pale b,
 .pale i {
   color: #fff;
 }
+
 .hidden {
   display: none;
 }
+
 input#inputFile {
-  border: 2px solid #119CF1;
+  border: 2px solid #0BAEC0;
   color: #555;
 }
+
 .gallery img {
   max-width: 90%;
   max-height: 240px;
   margin: 1em;
 }
+
 .pale {
-  background-color: #119CF1;
+  background-color: #0BAEC0;
   padding: 1em;
   color: #fff;
   margin: 1em 0.5em;
   border-radius: 5px;
 }
+
 .pale b {
   margin: 0.5em;
   display: block;
-  border-bottom: 1px solid #119CF1;
+  border-bottom: 1px solid #0BAEC0;
   padding-bottom: 0.75em;
 }
+
 .pale i {
   font-size: 0.7em;
 }
+
 .cont {
   font-size: 0.9em;
   font-weight: 700;
   margin: 2em;
   text-align: center;
 }
+
 .paypal {
-  background-color: #0080ff;
+  background-color: #0BAEC0;
   font-size: 1.25em;
   border: 0;
   padding: 0.5em 2em;
@@ -94,11 +111,13 @@ input#inputFile {
   color: #fff;
   display: block;
   margin: 2em auto;
-  box-shadow: 0 0 10px -2px #d6823c;
+  box-shadow: 0 0 10px -2px #0BAEC0;
 }
+
 .header-t {
   text-align: center;
 }
+
 a {
   text-decoration: underline;
 }

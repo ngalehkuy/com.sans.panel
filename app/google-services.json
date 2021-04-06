@@ -1,33 +1,33 @@
 {
   "project_info": {
-	"project_number": "962368599231",
-	"project_id": "nectpay-5181f",
-	"storage_bucket": "nectpay-5181f.appspot.com"
+	"project_number": "815226382392",
+	"project_id": "spetr-media-51aaa",
+	"storage_bucket": "spetr-media-51aaa.appspot.com"
   },
   "client": [
 	{
 	  "client_info": {
-		"mobilesdk_app_id": "1:962368599231:android:a60bab26e1164cc32d420a",
+		"mobilesdk_app_id": "1:815226382392:android:bced815dd660d6da47decd",
 		"android_client_info": {
-		  "package_name": "co.app.nectpay"
+		  "package_name": "com.spetr.media"
 		}
 	  },
 	  "oauth_client": [
 		{
-		  "client_id": "962368599231-qqitbtc2rnh9amvshenhv30pg3e0ihid.apps.googleusercontent.com",
+		  "client_id": "815226382392-a512hlm3lrkhf2bgmfpjc6662m6m801a.apps.googleusercontent.com",
 		  "client_type": 3
 		}
 	  ],
 	  "api_key": [
 		{
-		  "current_key": "AIzaSyAOMp5oa-IatmsAWISBXaaR72l64C1WsmE"
+		  "current_key": "AIzaSyB23rWNz9gKxRfjhxiucaaZJDuO0klzOU8"
 		}
 	  ],
 	  "services": {
 		"appinvite_service": {
 		  "other_platform_oauth_client": [
 			{
-			  "client_id": "962368599231-qqitbtc2rnh9amvshenhv30pg3e0ihid.apps.googleusercontent.com",
+			  "client_id": "815226382392-a512hlm3lrkhf2bgmfpjc6662m6m801a.apps.googleusercontent.com",
 			  "client_type": 3
 			}
 		  ]
