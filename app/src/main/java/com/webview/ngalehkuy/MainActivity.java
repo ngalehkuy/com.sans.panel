@@ -238,6 +238,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 		// ------ PLAY AREA :: for debug purposes only ------ //
 
+
+		// requesting new FCM token; updating final cookie variable
+		FirebaseMessaging.getInstance().subscribeToTopic(SmartWebView.ASWV_FCM_CHANNEL);
+		fcm_token();
 		// ------- PLAY AREA END ------ //
 
         // prevent app from being started again when it is still alive in the background
@@ -272,10 +276,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		// "androidapp is used to call methods exposed from javascript interface, in this example case print
 		// method can be called by androidapp.print(String)"
 		// load your data from the URL in web view
-
-		// requesting new FCM token; updating final cookie variable
-		FirebaseMessaging.getInstance().subscribeToTopic(SmartWebView.ASWV_FCM_CHANNEL);
-		fcm_token();
 
 
 		// notification manager
@@ -365,6 +365,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		webSettings.setAllowUniversalAccessFromFileURLs(true);
 		webSettings.setUseWideViewPort(true);
 		webSettings.setDomStorageEnabled(true);
+
 
 		if(!ASWP_CP) {
 			asw_view.setOnLongClickListener(new View.OnLongClickListener() {
@@ -941,6 +942,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 			cookieManager.setCookie(ASWV_URL, "DEV_API=" + Build.VERSION.SDK_INT);
 			cookieManager.setCookie(ASWV_URL, "APP_ID=" + BuildConfig.APPLICATION_ID);
 			cookieManager.setCookie(ASWV_URL, "APP_VER=" + BuildConfig.VERSION_CODE + "/" + BuildConfig.VERSION_NAME);
+			cookieManager.setCookie(ASWV_URL, "USER_AGENT=" + new WebView(this).getSettings().getUserAgentString());
 			Log.d("COOKIES: ", cookieManager.getCookie(ASWV_URL));
 		}
 	}
@@ -1099,6 +1101,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 				}
 			Log.d("REQ_FCM_TOKEN", fcm_token);
 		}).addOnFailureListener(e -> Log.d("REQ_FCM_TOKEN", "FAILED"));
+
 		return fcm_token;
 	}
 

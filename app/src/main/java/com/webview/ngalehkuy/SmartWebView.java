@@ -5,7 +5,7 @@ class SmartWebView {
 	/* -- PERMISSION VARIABLES -- */
 	static boolean ASWP_JSCRIPT       = true;         // enable JavaScript for webview
 	static boolean ASWP_FUPLOAD       = true;         // upload file from webview
-	static boolean ASWP_CAMUPLOAD     = false;         // enable upload from camera for photos
+	static boolean ASWP_CAMUPLOAD     = true;         // enable upload from camera for photos
 	static boolean ASWP_ONLYCAM       = false;        // incase you want only camera files to upload
 	static boolean ASWP_MULFILE       = false;         // upload multiple files in webview
 	static boolean ASWP_LOCATION      = false;         // track GPS locations
@@ -39,16 +39,16 @@ class SmartWebView {
 	static int ASWV_LAYOUT            = 0;            // default=0; for clear fullscreen layout, and =1 for drawer layout
 
 	// URL configs
-	static String ASWV_URL            = "https://spetr-media.com/auth/signin";  // https://spetr-media.com/auth/signin complete URL of your website or offline webpage "file:///android_asset/offline.html";
+	static String ASWV_URL            =  "http://192.168.1.2/fcm/tes.php"; //"https://spetr-media.com/auth/signin";  // https://spetr-media.com/auth/signin complete URL of your website or offline webpage "file:///android_asset/offline.html";
 	static String ASWV_SEARCH         = "https://www.google.com/search?q=";         // search query will start by the end of the present string
 	static String ASWV_SHARE_URL      = ASWV_URL + "?share=";                       // URL where you process external content shared with the app
 
 	// domains allowed to be opened inside webview
-	static String ASWV_EXC_LIST       = "github.com";       //separate domains with a comma (,)
+	static String ASWV_EXC_LIST       = "accounts.google.com";       //separate domains with a comma (,)
 
 	// custom user agent defaults
 	static boolean POSTFIX_USER_AGENT       = true;         // set to true to append USER_AGENT_POSTFIX to user agent
-	static boolean OVERRIDE_USER_AGENT      = false;        // set to true to use USER_AGENT instead of default one
+	static boolean OVERRIDE_USER_AGENT      = true;        // set to true to use USER_AGENT instead of default one
 	static String USER_AGENT_POSTFIX        = "NKuY_APP"; // useful for identifying traffic, e.g. in Google Analytics
 	static String CUSTOM_USER_AGENT         = "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Mobile Safari/537.36";    // custom user-agent
 
