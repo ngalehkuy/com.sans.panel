@@ -39,7 +39,7 @@ class SmartWebView {
 	static int ASWV_LAYOUT            = 0;            // default=0; for clear fullscreen layout, and =1 for drawer layout
 
 	// URL configs
-	static String ASWV_URL            =  "http://192.168.1.2/fcm/tes.php"; //"https://spetr-media.com/auth/signin";  // https://spetr-media.com/auth/signin complete URL of your website or offline webpage "file:///android_asset/offline.html";
+	static String ASWV_URL            =  "https://pinki-pedia.com/auth/login"; //"https://spetr-media.com/auth/signin";  // https://spetr-media.com/auth/signin complete URL of your website or offline webpage "file:///android_asset/offline.html";
 	static String ASWV_SEARCH         = "https://www.google.com/search?q=";         // search query will start by the end of the present string
 	static String ASWV_SHARE_URL      = ASWV_URL + "?share=";                       // URL where you process external content shared with the app
 

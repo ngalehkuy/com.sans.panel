@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Spetr-media</string>
+    <string name="app_name">Sans Panel</string>
 	<string name = "app_desc"> Tampilan web terintegrasi dengan fitur asli untuk membantu membuat aplikasi hybrid paling canggih. </string>
 	<string name = "image_view"> Tampilan Gambar </string>
 	<string name = "loading"> Memuat </string>
@@ -39,15 +39,13 @@
 	<string name="skip">LEWATI</string>
 	<string name="start">MULAI</string>
 
-	<string name="slide_1_title">PRODUK LENGKAP</string>
-	<string name="slide_1_desc">Layanan yang kami sediakan sangat lengkap dalam satu dashboard. Anda bisa menambahkan Followers, Like, Views, Dll pada aplikasi kami.</string>
+	<string name="slide_1_title">KUALITAS TERBAIK</string>
+	<string name="slide_1_desc">Kami selalu mengutamakan kualitas terbaik untuk layanan yang kami sediakan demi kepercayaan client.</string>
 
-	<string name="slide_2_title">MUDAH DAN PRAKTIS</string>
-	<string name="slide_2_desc">Aplikasi kami sangat mudah dan praktis digunakan.</string>
+	<string name="slide_2_title">PELAYANAN BANTUAN</string>
+	<string name="slide_2_desc">Pelayanan dan bantuan untuk client maupun reseller jika menemukan masalah/pertanyaan terkait layanan kami.</string>
 
-	<string name="slide_3_title"> CEPAT DAN BERKUALITAS</string>
-	<string name="slide_3_desc">Pesanan anda diproses dengan cepat oleh system robot kami yang berjalan 24 jam nonstop. Kami memastikan layanan yang disediakan memiliki kualitas terbaik.</string>
-
-	<string name="slide_4_title">HARGA TERJANGKAU</string>
-	<string name="slide_4_desc">Layanan yang kami sediakan memiliki harga sangat terjangkau mulai dari Rp 0 per 1.000,-</string>
+	<string name="slide_3_title">DESAIN APLIKASI</string>
+	<string name="slide_3_desc">Aplikasi kami sangat mudah di pahami,
+Dan dapat diakses melalui berbagai device/perangkat baik PC, tablet, maupun mobile phone.</string>
 </resources>

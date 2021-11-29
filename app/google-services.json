@@ -1,33 +1,33 @@
 {
   "project_info": {
-	"project_number": "815226382392",
-	"project_id": "spetr-media-51aaa",
-	"storage_bucket": "spetr-media-51aaa.appspot.com"
+	"project_number": "855565931854",
+	"project_id": "sans-panel",
+	"storage_bucket": "sans-panel.appspot.com"
   },
   "client": [
 	{
 	  "client_info": {
-		"mobilesdk_app_id": "1:815226382392:android:bced815dd660d6da47decd",
+		"mobilesdk_app_id": "1:855565931854:android:c872dbbc7ad594780f7a1f",
 		"android_client_info": {
-		  "package_name": "com.spetr.media"
+		  "package_name": "com.sans.panel"
 		}
 	  },
 	  "oauth_client": [
 		{
-		  "client_id": "815226382392-a512hlm3lrkhf2bgmfpjc6662m6m801a.apps.googleusercontent.com",
+		  "client_id": "855565931854-pea3isj85o6gflcen4krh8ksefdeka3h.apps.googleusercontent.com",
 		  "client_type": 3
 		}
 	  ],
 	  "api_key": [
 		{
-		  "current_key": "AIzaSyB23rWNz9gKxRfjhxiucaaZJDuO0klzOU8"
+		  "current_key": "AIzaSyBwitCQoLIUVmU4CfYQfeaIJETlq4ITVis"
 		}
 	  ],
 	  "services": {
 		"appinvite_service": {
 		  "other_platform_oauth_client": [
 			{
-			  "client_id": "815226382392-a512hlm3lrkhf2bgmfpjc6662m6m801a.apps.googleusercontent.com",
+			  "client_id": "855565931854-pea3isj85o6gflcen4krh8ksefdeka3h.apps.googleusercontent.com",
 			  "client_type": 3
 			}
 		  ]
